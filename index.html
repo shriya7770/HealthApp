@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriScan - Smart Food Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="scanner-container">
+    <header class="app-header">
+      <h1>🥗 NutriScan</h1>
+      <p class="tagline">Your Smart Food Nutrition Assistant</p>
+    </header>
+
+    <div class="info-card">
+      <p>📱 Scan any food product's barcode to get detailed nutritional information</p>
+      <ul class="features-list">
+        <li>✓ Instant nutrition facts</li>
+        <li>✓ Allergen information</li>
+        <li>✓ Ingredients list</li>
+      </ul>
+    </div>
+
+    <div class="scanner-section">
+      <div class="video-wrapper">
+        <video id="video" autoplay muted playsinline></video>
+        <div class="frame">
+          <div class="scan-line"></div>
+        </div>
+      </div>
+
+      <button id="startBtn" class="scan-button">📷 Start Scanner</button>
+    </div>
+
+    <div class="result">
+      <h2>Scanned Product:</h2>
+      <p id="barcodeResult" class="barcode-text">--</p>
+    </div>
+
+    <footer class="app-footer">
+      <p>💪 Make informed food choices for a healthier lifestyle</p>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
